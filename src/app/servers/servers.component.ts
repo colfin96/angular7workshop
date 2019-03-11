@@ -28,21 +28,4 @@ export class ServersComponent implements OnInit {
   onUpdateServerName(event: Event){
     this.serverName = (<HTMLInputElement>event.target).value;
   }
-
-  onUpdateUserName(event: Event){
-    let targetVal = (<HTMLInputElement>event.target).value;
-    if(targetVal != ''){
-      this.userName = targetVal;
-      this.isUserNameEmpty = false;
-    }
-    else{
-      this.isUserNameEmpty = true;
-    }
-
-  }
-
-  onClickUserNameButton(){
-    this.userName = '';
-    this.isUserNameEmpty = true;
-  }
 }
